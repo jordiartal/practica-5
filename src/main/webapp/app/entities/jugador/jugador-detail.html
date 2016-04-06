@@ -1,0 +1,48 @@
+
+<div>
+    <h2><span translate="practica5App.jugador.detail.title">Jugador</span> {{vm.jugador.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="practica5App.jugador.nombre">Nombre</dt></dt>
+        <dd>
+            <span>{{vm.jugador.nombre}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="practica5App.jugador.fechaNacimiento">FechaNacimiento</dt></dt>
+        <dd>
+            <span>{{vm.jugador.fechaNacimiento | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="practica5App.jugador.canastasTotales">CanastasTotales</dt></dt>
+        <dd>
+            <span>{{vm.jugador.canastasTotales}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="practica5App.jugador.asistenciasTotales">AsistenciasTotales</dt></dt>
+        <dd>
+            <span>{{vm.jugador.asistenciasTotales}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="practica5App.jugador.rebotesTotales">RebotesTotales</dt></dt>
+        <dd>
+            <span>{{vm.jugador.rebotesTotales}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="practica5App.jugador.posicionCampo">PosicionCampo</dt></dt>
+        <dd>
+            <span>{{vm.jugador.posicionCampo}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="practica5App.jugador.equipo">equipo</span></dt>
+        <dd>
+            <a ui-sref="equipo-detail({id:vm.jugador.equipo.id})">{{vm.jugador.equipo.nombre}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
